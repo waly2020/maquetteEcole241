@@ -4,6 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="./tailwind/tailwindCss.js"></script>
+  <style>
+   .parentContent:hover .childScal{
+     transform : scale(1.4);
+   }
+   .childScal,.scaleRotate{
+     transition : .3s;
+   }
+   .scaleRotate:hover{
+     transform : scale(1.2) rotate(10deg);
+   }
+  </style>
 </head>
 <body>
   <!-- top bar -->
@@ -86,9 +97,9 @@
 
     <div class="md:grid hidden xl:grid-cols-2 xl:grid-rows-[200px_200px_30px] gap-5 rounded-[10px]">
 
-      <div class="row-span-2 hidden xl:block relative">
+      <div class="row-span-2 hidden xl:block relative overflow-hidden parentContent">
 
-        <img class="absolute left-0 top-0 w-[100%] h-[100%] z-[-1] rounded-[10px]" src="./img/img.jpg"/>
+        <img class="absolute left-0 top-0 w-[100%] h-[100%] z-[-1] rounded-[10px] childScal" src="./img/img.jpg"/>
 
         <div class="w-[100%] h-[100%] bg-[rgba(0,0,0,0.7)] flex justify-end p-8 flex-col rounded-[10px]">
           <p class="text-[#eee] text-[13px] underline mb-3">Lorem ipsum dolor sit amet. Vel quia sint ex fuga quae et...</p>
@@ -97,16 +108,16 @@
 
       </div>
 
-      <div class="relative">
-         <img class="absolute left-0 top-0 w-[100%] h-[100%] z-[-1] rounded-[10px]" src="./img/img2.jpeg"/>
+      <div class="relative overflow-hidden parentContent">
+         <img class="absolute left-0 top-0 w-[100%] h-[100%] z-[-1] rounded-[10px] childScal" src="./img/img2.jpeg"/>
 
         <div class="w-[100%] h-[100%] bg-[rgba(0,0,0,0.7)] flex justify-end p-8 flex-col rounded-[10px]">
           <p class="text-[#eee] text-[13px] underline mb-3">Lorem ipsum dolor sit amet. Vel quia sint ex fuga quae et...</p>
           <p class="text-[#ddd] text-[13px] underline font-bold">Lire</p>
         </div>
       </div>
-      <div class="hidden xl:block relative">
-         <img class="absolute left-0 top-0 w-[100%] h-[100%] z-[-1] rounded-[10px]" src="./img/img3.jpeg"/>
+      <div class="hidden xl:block relative overflow-hidden parentContent">
+         <img class="absolute left-0 top-0 w-[100%] h-[100%] z-[-1] rounded-[10px] childScal" src="./img/img3.jpeg"/>
 
         <div class="w-[100%] h-[100%] bg-[rgba(0,0,0,0.7)] flex justify-end p-8 flex-col rounded-[10px]">
           <p class="text-[#eee] text-[13px] underline mb-3">Lorem ipsum dolor sit amet. Vel quia sint ex fuga quae et...</p>
@@ -133,7 +144,7 @@
       <div class="py-3 flex justify-center items-center gap-[30px] flex-wrap">
 
         <div class="max-w-[300px] w-[100%] h-[100px] grid grid-cols-3 items-center">
-          <img src="./img/p1.png">
+          <img class="scaleRotate" src="./img/p1.png">
           <div class="w-[100%] h-[100%] col-span-2 flex flex-col justify-center">
             <p class="font-bold text-[#fff] text-[14px]">PAS DE COURS.</p>
             <p class="font-bold text-[#fff] text-[14px]">PAS DE PROFS.</p>
@@ -141,7 +152,7 @@
         </div>
         <!--  -->
         <div class="max-w-[300px] w-[100%] h-[100px] grid grid-cols-3 items-center">
-          <img src="./img/p2.png">
+          <img class="scaleRotate" src="./img/p2.png">
           <div class="w-[100%] h-[100%] col-span-2 flex flex-col justify-center">
             <p class="font-bold text-[#fff] text-[14px]">UNE PÉDAGOGIE PAR</p>
             <p class="font-bold text-[#fff] text-[14px]">PROJETS</p>
@@ -149,7 +160,7 @@
         </div>
         <!--  -->
         <div class="max-w-[300px] w-[100%] h-[100px] grid grid-cols-3 items-center">
-          <img src="./img/p3.png">
+          <img class="scaleRotate" src="./img/p3.png">
           <div class="w-[100%] h-[100%] col-span-2 flex flex-col justify-center">
             <p class="font-bold text-[#fff] text-[14px]">UN APPRENTISSAGE</p>
             <p class="font-bold text-[#fff] text-[14px]">PEER TO PEER</p>
@@ -157,7 +168,7 @@
         </div>
         <!--  -->
         <div class="max-w-[300px] w-[100%] h-[100px] grid grid-cols-3 items-center">
-          <img src="./img/p4.png">
+          <img class="scaleRotate" src="./img/p4.png">
           <div class="w-[100%] h-[100%] col-span-2 flex flex-col justify-center">
             <p class="font-bold text-[#fff] text-[14px] uppercase">Apprendre en</p>
             <p class="font-bold text-[#fff] text-[14px] uppercase">s’ammusant</p>
@@ -309,9 +320,10 @@
 
     <div class="grid md:grid-cols-2 grid-rows-[1fr_1fr] gap-4">
       <!--  -->
-      <div class="md:row-span-2 relative">
+      <div class="md:row-span-2 relative overflow-hidden parentContent">
 
-        <img class="z-[-1] absolute left-0 top-0 w-[100%] h-[100%] object-cover" src="./img/lib.jpeg"/>
+        <img class="z-[-1] absolute left-0 top-0 w-[100%] h-[100%] object-cover childScal" src="./img/lib.jpeg"/>
+
         <div class="w-[100%] h-[100%] top-0 left-0 bg-[rgba(0,0,0,0.7)] flex justify-between gap-20 flex-col md:py-8 py-5 md:px-10 px-7">
           <p class="text-[14px] font-bold text-[#fff]">120 ETUDIANTS FORMES A CE JOUR</p>
           <div>
@@ -323,8 +335,8 @@
       </div>
       <!--  -->
       <!--  -->
-      <div class="relative">
-        <img class="absolute z-[-1] w-[100%] h-[100%] object-cover" src="./img/port.webp"/>
+      <div class="relative overflow-hidden parentContent">
+        <img class="absolute z-[-1] w-[100%] h-[100%] object-cover childScal" src="./img/port.webp"/>
         <div class="w-[100%] h-[100%] top-0 left-0 bg-[rgba(0,0,0,0.9)] flex justify-between gap-20 flex-col md:py-8 py-5 md:px-10 px-7">
           <p class="text-[14px] font-bold text-[#fff]">120 ETUDIANTS FORMES A CE JOUR</p>
           <div>
@@ -336,8 +348,8 @@
       </div>
       <!--  -->
       <!--  -->
-      <div class="relative">
-        <img class="absolute z-[-1] w-[100%] h-[100%] object-cover" src="./img/moanda.jpeg"/>
+      <div class="relative overflow-hidden parentContent">
+        <img class="absolute z-[-1] w-[100%] h-[100%] object-cover childScal" src="./img/moanda.jpeg"/>
         <div class="w-[100%] h-[100%] top-0 left-0 bg-[rgba(0,0,0,0.7)] flex justify-between gap-20 flex-col md:py-8 py-5 md:px-10 px-7">
           <p class="text-[14px] font-bold text-[#fff]">120 ETUDIANTS FORMES A CE JOUR</p>
           <div>
