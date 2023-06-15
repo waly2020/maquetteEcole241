@@ -51,12 +51,12 @@
         <div class="absolute w-[100%] h-[5px] bg-[#fff] bottom-0 left-0"></div>
       </div>
       <ul class="hidden xl:flex gap-8">
-        <li><a href="#" class="text-[#ddd] text-[14px]">Accueil</a></li>
-        <li><a href="#" class="text-[#ddd] text-[14px]">Nos Formations</a></li>
-        <li><a href="#" class="text-[#ddd] text-[14px]">Nos Campus</a></li>
-        <li><a href="#" class="text-[#ddd] text-[14px]">A propos de nous</a></li>
-        <li><a href="#" class="text-[#ddd] text-[14px]">Blog</a></li>
-        <li><a href="#" class="text-[#ddd] text-[14px]">Contact</a></li>
+        <li><a href="#" class="text-[#ddd] text-[14px] text-red-500">Accueil</a></li>
+        <li><a href="#" class="text-[#ddd] text-[14px] hover:text-red-500">Nos Formations</a></li>
+        <li><a href="#" class="text-[#ddd] text-[14px] hover:text-red-500">Nos Campus</a></li>
+        <li><a href="#" class="text-[#ddd] text-[14px] hover:text-red-500">A propos de nous</a></li>
+        <li><a href="#" class="text-[#ddd] text-[14px] hover:text-red-500">Blog</a></li>
+        <li><a href="#" class="text-[#ddd] text-[14px] hover:text-red-500">Contact</a></li>
       </ul>
       <button class="w-[200px] h-[40px] border-[1px] border-red-600 text-red-600 text-[13px] hidden xl:block">Postuler sur Libreville</button>
     </div>
@@ -76,17 +76,39 @@
     </p>
     <button class="bg-red-600 w-[250px] py-4 rounded-lg text-[#fff] m-auto md:m-0">Contactez-nous</button>
     </div>
-    <div class="md:grid hidden xl:grid-cols-2 xl:grid-rows-2 gap-5">
-      <div class="row-span-2 hidden xl:block">
-        <img src="./img/img.jpg"/>
+
+    <div class="md:grid hidden xl:grid-cols-2 xl:grid-rows-[200px_200px_30px] gap-5 rounded-[10px]">
+
+      <div class="row-span-2 hidden xl:block relative">
+
+        <img class="absolute left-0 top-0 w-[100%] h-[100%] z-[-1] rounded-[10px]" src="./img/img.jpg"/>
+
+        <div class="w-[100%] h-[100%] bg-[rgba(0,0,0,0.7)] flex justify-end p-8 flex-col rounded-[10px]">
+          <p class="text-[#eee] text-[13px] underline mb-3">Lorem ipsum dolor sit amet. Vel quia sint ex fuga quae et...</p>
+          <p class="text-[#ddd] text-[13px] underline font-bold">Lire</p>
+        </div>
+
       </div>
-      <div>
-        <img src="./img/img2.jpeg"/>
+
+      <div class="relative">
+         <img class="absolute left-0 top-0 w-[100%] h-[100%] z-[-1] rounded-[10px]" src="./img/img2.jpeg"/>
+
+        <div class="w-[100%] h-[100%] bg-[rgba(0,0,0,0.7)] flex justify-end p-8 flex-col rounded-[10px]">
+          <p class="text-[#eee] text-[13px] underline mb-3">Lorem ipsum dolor sit amet. Vel quia sint ex fuga quae et...</p>
+          <p class="text-[#ddd] text-[13px] underline font-bold">Lire</p>
+        </div>
       </div>
-      <div class="hidden xl:block">
-        <img src="./img/img3.jpeg"/>
+      <div class="hidden xl:block relative">
+         <img class="absolute left-0 top-0 w-[100%] h-[100%] z-[-1] rounded-[10px]" src="./img/img3.jpeg"/>
+
+        <div class="w-[100%] h-[100%] bg-[rgba(0,0,0,0.7)] flex justify-end p-8 flex-col rounded-[10px]">
+          <p class="text-[#eee] text-[13px] underline mb-3">Lorem ipsum dolor sit amet. Vel quia sint ex fuga quae et...</p>
+          <p class="text-[#ddd] text-[13px] underline font-bold">Lire</p>
+        </div>
       </div>
+      <p><a class="underline" href="#">Nos Articles de blog</a></p>
     </div>
+
   </header>
   <!-- fin header -->
   <!-- premiere section -->
