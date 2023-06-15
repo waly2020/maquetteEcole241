@@ -7,33 +7,40 @@
 </head>
 <body>
   <!-- top bar -->
-  <div class="w-[100%] h-[60px] px-8 hidden sm:flex justify-between items-center">
+  <div class="w-[100%] h-[60px] px-8 flex justify-between items-center">
 
    <div class="h-[40px] grid grid-cols-3 md:w-[500px] w-[100%] gap-2">
 
-     <div class="border-[1px] border-[#777] bg-[#fff] px-2 -[4px]-[4px]">
+     <div class="border-[1px] border-[#777] bg-[#fff] px-2 -[4px]-[4px] col-span-2 sm:col-span-1">
        <select class="w-[100%] h-[100%] bg-[#fff] text-[14px]">
          <option>Alumni</option>
          <option>Alumni</option>
          <option>Alumni</option>
        </select>
      </div>
-     <div class="border-[1px] border-[#777] col-span-2 flex justify-between items-center px-3 rounded-[4px]">
+     <div class="border-[1px] border-[#777] sm:col-span-2 flex sm:justify-between justify-center items-center px-3 rounded-[4px]">
         <img src="./svg/cm.png" class="w-[20px]"/>
-        <p class="text-[14px]">Participer au reunion d information en ligne</p>
+        <p class="text-[14px] sm:block hidden">Participer au reunion d information en ligne</p>
      </div>
 
    </div>
 
    <div class="md:flex gap-4 hidden">
      <div class="w-[25px] h-[25px] rounded-[999px] flex justify-center items-center">
-       <img src="./svg/fb.png" class="w-[20px]"/>
+       <img src="./svg/fb.png" class="w-[23px]"/>
      </div>
      <div class="[25px] h-[25px] rounded-[999px] flex justify-center items-center">
-       <img src="./svg/fb.png" class="w-[20px]"/>
+       <img src="./svg/tw.png" class="w-[23px]"/>
      </div>
      <div class="[25px] h-[25px] rounded-[999px] flex justify-center items-center">
-       <img src="./svg/fb.png" class="w-[20px]"/>
+       <img src="./svg/lk.png" class="w-[23px]"/>
+     </div>
+     <div class="grid grid-cols-[25px_50px] ml-8">
+       <img src="./svg/gt.png" class="w-[23px]"/>
+       <select>
+         <option>FR</option>
+         <option>AG</option>
+       </select>
      </div>
    </div>
 
